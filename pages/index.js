@@ -13,10 +13,10 @@ const{data, error} = useSWR('/api/get-promo', fetcher)
     return(
         <div>
             <PageTitle title='Seja Bem Vindo'/>
-            <h1 className='titulo'>Restaurante PalpiteBox</h1>
+            <h1 className='titulo'>Aurora Boutique</h1>
             <p className='texto'>
-                O restaurante x estara sempre em busca por atender melhor seus clientes.<br/>
-                Por isso, estamos sempre abertos a ouvir a sua opinião.
+            Conte a nós como foi sua experiencia.
+            Adorariamos ouvir.
             </p>
             <div className='botao'>
                 <Link href='/pesquisa'>
