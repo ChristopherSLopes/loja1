@@ -1,9 +1,10 @@
 :root{
     --wrapper: #F0A9AD;
     --menu: #5890A6;
+    --menu-letter: blue;
     --footer: #5890A6;
     --desenvolvedor: black;
-    --body: #F2CA99;
+    --body:  #F2CA99;
 
 }
 
@@ -25,6 +26,10 @@
     padding: 1rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     text-align: center;
+}
+
+.menu a{
+    color: var(--menu-letter);
 }
 
 .ancora{
