@@ -232,5 +232,9 @@ body{
     .titulo{
         margin-bottom: 1.3rem;
         margin-top: 0.5rem;
+        background-color: red;
+    }
+    img.logo{
+        max-width: 50px;
     }
 }

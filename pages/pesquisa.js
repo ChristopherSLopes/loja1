@@ -42,7 +42,7 @@ const Pesquisa = () => {
                 <label className='label'>Seu Nome:</label>
                 <input type='text' className='input' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome}  required />
                 <label className='label'>Whatsapp:</label>
-                <input type='tel' className='input' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp}  required/>
+                <input type='tel' className='input' placeholder='Whatsapp' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={onChange} name='Whatsapp' value={form.Whatsapp}  required/>
                 <label className='label'>Sugestões e comentários:</label>
                 <textarea className='input' cols='25' rows='5' onChange={onChange} name='Comentario' value={form.Comentario}></textarea>
 

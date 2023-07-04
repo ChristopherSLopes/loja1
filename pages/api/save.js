@@ -16,12 +16,12 @@ export default async (req, res) =>{
             private_key: fromBase64(process.env.SHEET_PRIVATE_KEY)
         })
         await doc.loadInfo() 
-        const sheet = doc.sheetsByIndex[1]
+        const sheet = doc.sheetsByIndex[2]
         const sheetEnd = doc.sheetsByIndex[3]
 
         const data = JSON.parse(req.body)
 
-        const sheetConfig = doc.sheetsByIndex[2] //Peguei a terceira. O doc. pode pega planilhas de diversas formas, como id, count. Mas a melhor é o index
+        const sheetConfig = doc.sheetsByIndex[1] //Peguei a terceira. O doc. pode pega planilhas de diversas formas, como id, count. Mas a melhor é o index
         await sheetConfig.loadCells('A1:B3') //Intervalo 
 
         const mostrarPromocaoCell = sheetConfig.getCell(2, 0) //Pega a celula 1, coluna 0. Mas só pode pega a celula que recebeu o load
