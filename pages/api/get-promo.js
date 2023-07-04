@@ -12,7 +12,7 @@ export default async(req, res) =>{ //Na comunicação http temos require e respo
         })
         await doc.loadInfo() //to pedindo para carregar as informações da planilha
 
-        const sheet = doc.sheetsByIndex[2] //Peguei a terceira. O doc. pode pega planilhas de diversas formas, como id, count. Mas a melhor é o index
+        const sheet = doc.sheetsByIndex[1] //Peguei a Segunda. O doc. pode pega planilhas de diversas formas, como id, count. Mas a melhor é o index
         await sheet.loadCells('A3:B2') //Intervalo celular
 
         const mostrarPromocaoCell = sheet.getCell(2, 0) //Pega a celula 1, coluna 0. Mas só pode pega a celula que recebeu o load
