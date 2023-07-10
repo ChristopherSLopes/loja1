@@ -74,7 +74,7 @@ const Pesquisa = () => {
                     <div className='cupom-div'>
                         <span className='promocao-cupom'>{retorno.Promo}</span>
                         <br/>
-                        <span>Tire um print ou foto desta tela e apresente ao garçon</span>
+                        <span>Tire um print ou foto desta tela na proxima compra.</span>
                     </div>
                 }
             </div>}
