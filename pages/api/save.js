@@ -38,7 +38,7 @@ export default async (req, res) =>{
         //Nome:	Email:	Whatsapp:	Cupom:	Promo:
         await sheet.addRow({
             'Nome:': data.Nome,
-            'Whatsapp:': data.Whatsapp,    //O nome, email, watsapp estão entre parenteses porque tem um ':', se não tivesse o ':' podia ser sem
+            'Whatsapp:': data.Whatsapp,
             'Comentário:': data.Comentario,
             'Nota:': parseInt(data.Nota),
             'Cupom:': Cupom,
@@ -46,12 +46,13 @@ export default async (req, res) =>{
         })
         await sheetEnd.addRow({
             'Nome:': data.Nome,
-            'Whatsapp:': data.Whatsapp,    //O nome, email, watsapp estão entre parenteses porque tem um ':', se não tivesse o ':' podia ser sem
+            'Whatsapp:': data.Whatsapp,
             'Comentário:': data.Comentario,
             'Nota:': parseInt(data.Nota),
             'Data de Preenchimento:': moment().format('DD/MM/YYYY HH:mm:ss'),
             'Promo:': Promo
         })
+
         res.end(JSON.stringify({
             showCoupom: Cupom !== '',
             Cupom,

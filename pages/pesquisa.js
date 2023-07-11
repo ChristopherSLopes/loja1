@@ -8,7 +8,7 @@ const Pesquisa = () => {
         Whatsapp : '',
         Nota : 0
     })
-    const notas = [0, 1, 2, 3, 4, 5]
+    const notas = [1, 2, 3, 4, 5]
     const [ sucess, setSuccess ] = useState(false)
     const [ retorno, setRetorno ] = useState({})
     const save = async () =>{
