@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PageTitle from './components/PageTitle'
 
 const Pesquisa = () => {
+    const [botaoDesabilitado, setBotaoDesabilitado] = useState(false);
     const [ form, setForm ] = useState({ //Apenas colocaos o formulario em um useState
         Nome : '',
         Whatsapp : '',
@@ -11,6 +12,7 @@ const Pesquisa = () => {
     const [ sucess, setSuccess ] = useState(false)
     const [ retorno, setRetorno ] = useState({})
     const save = async () =>{
+        setBotaoDesabilitado(true);
         try{
             const response = await fetch('/api/save', { //O response é a resposta do fetch, o fetch sempre retorna uma resposta.
                 method: 'POST',
@@ -57,7 +59,7 @@ const Pesquisa = () => {
                     )
                 })}
                 </div>
-                <button className='button' onClick={save}>Salvar</button>
+                <button className='button' onClick={save} disabled={botaoDesabilitado}>Salvar</button>
 
             </div> /* se não tiver cupom ainda, mostra esse, se não, mostre o cupom*/}
             { sucess && <div className='div-cupom'> 
