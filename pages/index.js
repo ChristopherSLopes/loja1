@@ -15,7 +15,7 @@ const{data, error} = useSWR('/api/get-promo', fetcher)
             <PageTitle title='Seja Bem Vindo'/>
             <h1 className='titulo'>Aurora Boutique</h1>
             <p className='texto'>
-            Ficamos feliz que esteja aqui!<br/>
+            Ficamos felizes que esteja aqui!<br/>
             Conte a nós como foi sua experiência.<br/>
             Adoraríamos ouvir.
             </p>
