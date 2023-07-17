@@ -5,7 +5,9 @@
     --footer: #5890A6;
     --desenvolvedor: black;
     --body:  #F2CA99;
-
+    --footer-letter: blue;
+    --color-button-send: rgb(37 150 200);
+    --color-button-go: rgb(37 150 200);
 }
 
 /*Cabeçalho*/
@@ -70,6 +72,10 @@ img.logo{
     width: 16px;
 }
 
+.footer a{
+    color: var(--footer-letter);
+}
+
 .teste{
     text-align: center;
 }
@@ -108,7 +114,7 @@ body{
     margin-bottom: 3rem; /* 48px*/
 }
 .botaoDentro{
-    background-color: rgb(37 150 200);
+    background-color: var(--color-button-go);
     padding-left: 1.5rem;
     padding-right: 1.5rem; 
     padding-top: 1rem; /* 16px */
@@ -160,7 +166,7 @@ body{
 }
 
 .button{
-    background-color: rgb(96 165 250);
+    background-color: var(--color-button-send);
     padding-top: 1rem; /* 16px */
     padding-bottom: 1rem; /* 16px */
     padding-left: 2.5rem; /* 40px */
