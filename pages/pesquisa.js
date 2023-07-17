@@ -38,7 +38,7 @@ const Pesquisa = () => {
             <PageTitle title='Pesquisa'/>
             <h1 className='titulo'>Criticas e sugestões</h1>
             <p>
-                Estamos sempre abertos a ouvir a sua opinião.
+                Estamos sempre abertos para ouvir você.
             </p>
             { !sucess && <div className='form'>
                 <label className='label'>Seu Nome:</label>
