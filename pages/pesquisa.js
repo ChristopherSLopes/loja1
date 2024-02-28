@@ -40,7 +40,7 @@ const Pesquisa = () => {
         }))
     }
     return(
-        <div>
+        <div className='tudo'>
             <PageTitle title='Pesquisa'/>
             <h1 className='titulo'>Criticas e sugestões</h1>
             <p>
