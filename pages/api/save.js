@@ -17,7 +17,6 @@ export default async (req, res) =>{
         })
         await doc.loadInfo() 
         const sheet = doc.sheetsByIndex[2]
-        const sheetEnd = doc.sheetsByIndex[3]
 
         const data = JSON.parse(req.body)
 
@@ -38,19 +37,19 @@ export default async (req, res) =>{
         //Nome:	Email:	Whatsapp:	Cupom:	Promo:
         await sheet.addRow({
             'Nome:': data.Nome,
-            'Whatsapp:': data.Whatsapp,
-            'Comentário:': data.Comentario,
-            'Nota:': parseInt(data.Nota),
             'Cupom:': Cupom,
-            'Promo:': Promo
-        })
-        await sheetEnd.addRow({
-            'Nome:': data.Nome,
             'Whatsapp:': data.Whatsapp,
+            'Promo:': Promo,
             'Comentário:': data.Comentario,
-            'Nota:': parseInt(data.Nota),
             'Data de Preenchimento:': moment().format('DD/MM/YYYY HH:mm:ss'),
-            'Promo:': Promo
+            'Atendimento:': parseInt(data.Atendimento),
+            'Localização:': parseInt(data.Localizacao),
+            'Estacionamento:': parseInt(data.Estacionamento),
+            'Limpeza:': parseInt(data.Limpeza),
+            'Pagamento:': parseInt(data.Pagamento),
+            'Variedades:': parseInt(data.Variedade),
+            'Qualidade:': parseInt(data.Qualidade),
+            'Preço:': parseInt(data.Preco)
         })
 
         res.end(JSON.stringify({

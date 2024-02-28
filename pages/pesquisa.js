@@ -6,9 +6,15 @@ const Pesquisa = () => {
     const [ form, setForm ] = useState({ //Apenas colocaos o formulario em um useState
         Nome : '',
         Whatsapp : '',
-        Nota : 0
+        Atendimento: '',
+        Localizacao: '',
+        Estacionamento: '',
+        Limpeza: '',
+        Pagamento: '',
+        Variedade: '',
+        Qualidade: '',
+        Preco: ''
     })
-    const notas = [1, 2, 3, 4, 5]
     const [ sucess, setSuccess ] = useState(false)
     const [ retorno, setRetorno ] = useState({})
     const save = async () =>{
@@ -42,25 +48,106 @@ const Pesquisa = () => {
             </p>
             { !sucess && <div className='form'>
                 <label className='label'>Seu Nome:</label>
-                <input type='text' className='input' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome}  required />
+                <input type='text' className='input' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome}/>
                 <label className='label'>Whatsapp:</label>
-                <input type='tel' className='input' placeholder='Whatsapp' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={onChange} name='Whatsapp' value={form.Whatsapp}  required/>
-                <label className='label'>Sugestões e comentários:</label>
-                <textarea className='input' cols='25' rows='5' onChange={onChange} name='Comentario' value={form.Comentario}></textarea>
-
-                <label className='label'>Nota:</label>
-                <div className='divRadio'>
-                {notas.map(nota => {
-                    return (
-                        <label className='label'>
-                            {nota} <br/>
-                            <input type='radio' name='Nota' value={nota} onChange={onChange}/>
-                        </label>
-                    )
-                })}
+                <input type='tel' className='input' placeholder='Whatsapp' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={onChange} name='Whatsapp' value={form.Whatsapp}/>
+                
+                <h2 className='titulo-pesquisa'>Conte o que acha</h2>
+            
+                <div className='boxescolha'>
+                    <label className='label escolha'>1- Atendimento?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Atendimento' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Atendimento' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Atendimento' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Atendimento' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Atendimento' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
                 </div>
-                <button className='button' onClick={save} disabled={botaoDesabilitado}>Salvar</button>
+                
+                <div className='boxescolha'>
+                    <label className='label escolha'>2- Localização?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Localizacao' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Localizacao' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Localizacao' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Localizacao' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Localizacao' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+                
+                <div className='boxescolha'>
+                    <label className='label escolha'>3- Estacionamento?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Estacionamento' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Estacionamento' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Estacionamento' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Estacionamento' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Estacionamento' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+                
+                <div className='boxescolha'>
+                <label className='label escolha'>4- Limpeza?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Limpeza' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Limpeza' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Limpeza' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Limpeza' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Limpeza' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+                
+                <div className='boxescolha'>
+                    <label className='label escolha'>5- Formas de pagamento?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Pagamento' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Pagamento' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Pagamento' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Pagamento' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Pagamento' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+                
+                <div className='boxescolha'>
+                    <label className='label escolha'>6- Variedade das peças?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Variedade' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Variedade' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Variedade' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Variedade' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Variedade' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+                
+                <div className='boxescolha'>
+                    <label className='label escolha'>7- Qualidade das peças?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Qualidade' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Qualidade' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Qualidade' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Qualidade' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Qualidade' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
 
+                <div className='boxescolha'>
+                    <label className='label escolha'>8- Preço?</label><br/>
+                    <div className='boxOpcoes'>
+                        <label className='opcoes'><input type='radio' name='Preco' value={5} onChange={onChange}/>Muito Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Preco' value={4} onChange={onChange}/>Bom</label><br/>
+                        <label className='opcoes'><input type='radio' name='Preco' value={3} onChange={onChange}/>Regular</label><br/>
+                        <label className='opcoes'><input type='radio' name='Preco' value={2} onChange={onChange}/>Ruim</label><br/>
+                        <label className='opcoes'><input type='radio' name='Preco' value={1} onChange={onChange}/>Muito Ruim</label><br/>
+                    </div>
+                </div>
+
+
+                <label className='label'>Tem alguma coisa que queira compartilhar?</label>
+                <textarea className='comentario' cols='25' rows='5' onChange={onChange} name='Comentario' value={form.Comentario}></textarea>
+
+                <button className='button' onClick={save} disabled={botaoDesabilitado}>Salvar</button>
+    
             </div> /* se não tiver cupom ainda, mostra esse, se não, mostre o cupom*/}
             { sucess && <div className='div-cupom'> 
                 <p className='cupom-blue'>Obrigado por contribuir com sua sugestão.</p>
