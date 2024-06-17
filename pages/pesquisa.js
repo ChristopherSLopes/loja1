@@ -143,7 +143,7 @@ const Pesquisa = () => {
                 </div>
 
 
-                <label className='label'>Tem alguma coisa que queira compartilhar?</label>
+                <label className='label tituloComentario'>Tem alguma coisa que queira compartilhar?</label>
                 <textarea className='comentario' cols='25' rows='5' onChange={onChange} name='Comentario' value={form.Comentario}></textarea>
 
                 <button className='button' onClick={save} disabled={botaoDesabilitado}>Salvar</button>
